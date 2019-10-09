@@ -78,4 +78,4 @@ echo 'sleep 5' | tee -a /home/$name/start.sh
 echo 'sudo su -c "screen -d -m -S Worldserver ./worldserver' -s /bin/sh $name | tee -a /home/$name/start.sh
 chmod 775 start.sh
 (crontab -l ; echo "@reboot cd /home/$name/ && sh start.sh") | sort - | uniq - | crontab -
-reboot
+
